@@ -94,7 +94,7 @@ s.source       = { :git => "https://github.com/zxin2928/ZXLoadingView.git", :tag
 #  Not including the public_header_files will make all headers public.
 #
 
-s.source_files =  'ZXLoadingView/Classes'
+s.source_files =  'ZXLoadingView/ZXLoadingView/Classes','ZXLoadingView/Classes'
 
 # s.public_header_files = "Classes/**/*.h"
 
