@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
 #
 
 s.name         = "ZXLoadingView"
-s.version      = "0.2.5"
+s.version      = "1.2.5"
 s.summary      = "An iOS activity spinner modeled after Google's Material Design spinner"
 
 # This description is used to generate tags and improve search results.
@@ -83,7 +83,7 @@ s.tvos.deployment_target = "9.0"
 #  Supports git, hg, bzr, svn and HTTP.
 #
 
-s.source       = { :git => "https://github.com/zxin2928/ZXLoadingView.git", :tag => "0.2.5" }
+s.source       = { :git => "https://github.com/zxin2928/ZXLoadingView.git", :tag => "1.2.5" }
 
 
 # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
