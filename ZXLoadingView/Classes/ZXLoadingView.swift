@@ -38,7 +38,7 @@ class ZXLoadingView: UIView {
         }
         
         set{
-            self.isHidden = !self.isAnimating && hidesWhenStopped
+            self.isHidden = !self.isAnimating && newValue
 
         }
 
@@ -52,7 +52,7 @@ class ZXLoadingView: UIView {
         }
         
         set{
-            self.progressLayer.lineWidth = lineWidth;
+            self.progressLayer.lineWidth = newValue;
             self.updatePath()
 
         }
@@ -65,7 +65,7 @@ class ZXLoadingView: UIView {
         }
         
         set{
-            self.progressLayer.lineCap = lineCap;
+            self.progressLayer.lineCap = newValue;
             self.updatePath()
 
         }
@@ -87,9 +87,10 @@ class ZXLoadingView: UIView {
             if self.isAnimating {
                 return
             }
+            
             self.progressLayer.strokeStart = 0.0
-            self.progressLayer.strokeEnd = percentComplete;
-
+            self.progressLayer.strokeEnd = newValue;
+                
         }
 
     }
