@@ -16,7 +16,7 @@ let loadingView:ZXLoadingView = ZXLoadingView.init(frame:CGRect.init(x: self.vie
 // Set the line width of the spinner
 loadingView.lineWidth = 2.0
 // Set the tint color of the spinner
-loadingView.tintColor = UIColor.redColor
+loadingView.tintColor = .red
 
 // Add it as a subview
 self.view.addSubview(loadingView)
@@ -24,8 +24,8 @@ self.view.addSubview(loadingView)
 ...
 
 // Start & stop animations
-loadingView.startAnimating
-loadingView.stopAnimating
+loadingView.startAnimating()
+loadingView.stopAnimating()
 
 ```
 Also Support Xib & StoryBoard
