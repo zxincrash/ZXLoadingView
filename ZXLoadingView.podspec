@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
 #
 
 s.name         = "ZXLoadingView"
-s.version      = "1.2.6"
+s.version      = "1.2.7"
 s.summary      = "An iOS progress-activity(swift language)"
 
 # This description is used to generate tags and improve search results.
@@ -78,7 +78,7 @@ s.tvos.deployment_target = "9.0"
 #  Supports git, hg, bzr, svn and HTTP.
 #
 
-s.source       = { :git => "https://github.com/zxin2928/ZXLoadingView.git", :tag => "1.2.6" }
+s.source       = { :git => "https://github.com/zxin2928/ZXLoadingView.git", :tag => "1.2.7" }
 
 
 # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
