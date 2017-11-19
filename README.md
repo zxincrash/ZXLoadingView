@@ -13,9 +13,9 @@ To run the example project directory.
 // Initialize the progress view
 let loadingView:ZXLoadingView = ZXLoadingView.init(frame:CGRect.init(x: self.view.center.x, y: self.view.center.y, width: 100, height: 100))
 
-// Set the line width of the spinner
+// Set the line width of the loadingView
 loadingView.lineWidth = 2.0
-// Set the tint color of the spinner
+// Set the tint color of the loadingView
 loadingView.tintColor = .red
 
 // Add it as a subview
