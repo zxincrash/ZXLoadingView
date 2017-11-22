@@ -33,12 +33,8 @@ class ZXLoadingView: UIView {
     
     // default is YES. calls -setHidden when animating gets set to NO
     var hidesWhenStopped:Bool!{
-        get{
-            return false
-        }
-        
-        set{
-            self.isHidden = !self.isAnimating && newValue
+        didSet{
+            self.isHidden = !self.isAnimating && hidesWhenStopped
 
         }
 
@@ -46,13 +42,9 @@ class ZXLoadingView: UIView {
     var color:UIColor!
     
     /** Sets the line width of the spinner's circle. */
-    var lineWidth:CGFloat{
-        get{
-            return self.progressLayer.lineWidth
-        }
-        
-        set{
-            self.progressLayer.lineWidth = newValue;
+    var lineWidth:CGFloat!{
+        didSet{
+            self.progressLayer.lineWidth = lineWidth
             self.updatePath()
 
         }
@@ -60,12 +52,8 @@ class ZXLoadingView: UIView {
 
     /** Sets the line cap of the spinner's circle. */
      var lineCap:String!{
-        get{
-            return self.progressLayer.lineCap
-        }
-        
-        set{
-            self.progressLayer.lineCap = newValue;
+        didSet{
+            self.progressLayer.lineCap = lineCap
             self.updatePath()
 
         }
@@ -79,17 +67,13 @@ class ZXLoadingView: UIView {
     
     /** Property to manually set the percent complete of the spinner, in case you don't want to start at 0. Valid values are 0.0 to 1.0 */
     var percentComplete:CGFloat!{
-        get{
-            return 0.0
-        }
-        
-        set{
+        didSet{
             if self.isAnimating {
                 return
             }
             
             self.progressLayer.strokeStart = 0.0
-            self.progressLayer.strokeEnd = newValue;
+            self.progressLayer.strokeEnd = self.percentComplete
                 
         }
 
@@ -112,6 +96,7 @@ class ZXLoadingView: UIView {
     }
     
     private func initialize(){
+        self.hidesWhenStopped = false
         self.duration = 1.5
         self.percentComplete = 0.0
         self.timingFunction = CAMediaTimingFunction.init(name: kCAMediaTimingFunctionEaseInEaseOut)

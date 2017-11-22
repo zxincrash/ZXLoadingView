@@ -37,13 +37,18 @@ class ZXLoadingViewController: UIViewController {
         
         self.view.addSubview(self.loadingView)
         self.loadingView.startAnimating()
-        self.loadingView.tintColor = UIColor.red
 
         self.view.addSubview(self.animateLab)
         self.view.addSubview(self.animateSwitch)
         
         self.view.addSubview(self.lineWidthLab)
         self.view.addSubview(self.lineWidthSlide)
+        
+        self.view.addSubview(self.changeColorBtn)
+        self.view.addSubview(self.changeLineWidthBtn)
+        self.view.addSubview(self.changeSquareCapBtn)
+        self.view.addSubview(self.changeRoundCapBtn)
+        self.view.addSubview(self.changeButtCapBtn)
         // Do any additional setup after loading the view.
     }
 
@@ -103,6 +108,46 @@ class ZXLoadingViewController: UIViewController {
         return slide
     }()
     
+    lazy var changeColorBtn: UIButton = {
+        var button:UIButton = UIButton.init(type: UIButtonType.system)
+        button.frame = CGRect.init(x: self.animateLab.frame.minX, y: self.lineWidthLab.frame.maxY + 2*margin, width: 150, height: 20)
+        button.setTitle("change color", for: UIControlState.normal)
+        button.addTarget(self, action: #selector(changeColorAction(sender:)), for: UIControlEvents.touchUpInside)
+        return button
+    }()
+    
+    lazy var changeLineWidthBtn: UIButton = {
+        var button:UIButton = UIButton.init(type: UIButtonType.system)
+        button.frame = CGRect.init(x: self.animateLab.frame.minX, y: self.changeColorBtn.frame.maxY + margin, width: 150, height: 20)
+        button.setTitle("change line width", for: UIControlState.normal)
+        button.addTarget(self, action: #selector(changeLineWidthAction(sender:)), for: UIControlEvents.touchUpInside)
+        return button
+    }()
+    
+    lazy var changeSquareCapBtn: UIButton = {
+        var button:UIButton = UIButton.init(type: UIButtonType.system)
+        button.frame = CGRect.init(x: self.animateLab.frame.minX, y: self.changeLineWidthBtn.frame.maxY + margin, width: 150, height: 20)
+        button.setTitle("change square cap", for: UIControlState.normal)
+        button.addTarget(self, action: #selector(changeSquareCapAction(sender:)), for: UIControlEvents.touchUpInside)
+        return button
+    }()
+    
+    lazy var changeRoundCapBtn: UIButton = {
+        var button:UIButton = UIButton.init(type: UIButtonType.system)
+        button.frame = CGRect.init(x: self.animateLab.frame.minX, y: self.changeSquareCapBtn.frame.maxY + margin, width: 150, height: 20)
+        button.setTitle("change round cap", for: UIControlState.normal)
+        button.addTarget(self, action: #selector(changeRoundCapAction(sender:)), for: UIControlEvents.touchUpInside)
+        return button
+    }()
+    
+    lazy var changeButtCapBtn: UIButton = {
+        var button:UIButton = UIButton.init(type: UIButtonType.system)
+        button.frame = CGRect.init(x: self.animateLab.frame.minX, y: self.changeRoundCapBtn.frame.maxY + margin, width: 150, height: 20)
+        button.setTitle("change butt cap", for: UIControlState.normal)
+        button.addTarget(self, action: #selector(changeButtCapAction(sender:)), for: UIControlEvents.touchUpInside)
+        return button
+    }()
+    
     @objc func slideValueChanged(sender:UISlider){
         if !self.animate {
             self.loadingView.percentComplete = CGFloat(self.lineWidthSlide.value/self.lineWidthSlide.maximumValue)
@@ -117,6 +162,43 @@ class ZXLoadingViewController: UIViewController {
             self.loadingView.startAnimating()
         }
     }
+    
+
+    
+    @objc func changeColorAction(sender:UIButton){
+        self.loadingView.tintColor = ZXLoadingViewController.randomColor()
+    }
+    
+    @objc func changeLineWidthAction(sender:UIButton){
+        self.loadingView.lineWidth = CGFloat(drand48())*10;
+        if (self.loadingView.lineWidth == 0){
+            self.loadingView.lineWidth = 0.1
+
+        }
+
+    }
+    
+    @objc func changeSquareCapAction(sender:UIButton){
+        self.loadingView.lineCap = kCALineCapSquare
+
+    }
+    
+    @objc func changeRoundCapAction(sender:UIButton){
+        self.loadingView.lineCap = kCALineCapRound
+    }
+    
+    @objc func changeButtCapAction(sender:UIButton){
+        self.loadingView.lineCap = kCALineCapButt
+    }
+    // MARK: - Helper methods
+     class func randomColor() -> UIColor {
+        let hue:CGFloat = CGFloat(drand48())
+        let saturation:CGFloat = CGFloat(drand48()) + 0.5
+        let brightness:CGFloat = CGFloat(drand48()) + 0.5
+        
+        return UIColor.init(hue: hue, saturation: saturation, brightness: brightness, alpha: 1)
+    }
+
     /*
     // MARK: - Navigation
 
