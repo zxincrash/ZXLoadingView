@@ -11,6 +11,7 @@
 		DC5816B91FBEB0230000226C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC5816B71FBEB0230000226C /* Assets.xcassets */; };
 		DC5816BE1FBEB09B0000226C /* ZXLoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5816BD1FBEB09B0000226C /* ZXLoadingViewController.swift */; };
 		DC5817091FBF97420000226C /* ZXLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5817081FBF97420000226C /* ZXLoadingView.swift */; };
+		DC774F921FC65F2400246CC5 /* demo.mov in Resources */ = {isa = PBXBuildFile; fileRef = DC774F911FC65F2400246CC5 /* demo.mov */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		DC5816B81FBEB0230000226C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DC5816BD1FBEB09B0000226C /* ZXLoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZXLoadingViewController.swift; sourceTree = "<group>"; };
 		DC5817081FBF97420000226C /* ZXLoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZXLoadingView.swift; sourceTree = "<group>"; };
+		DC774F911FC65F2400246CC5 /* demo.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = demo.mov; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,10 +54,11 @@
 		DC5816A31FBEAEB10000226C /* ZXLoadingView */ = {
 			isa = PBXGroup;
 			children = (
-				DC5817071FBF97420000226C /* Classes */,
 				DC5816A41FBEAEB10000226C /* AppDelegate.swift */,
-				DC5816B61FBEB0230000226C /* Supporting Files */,
 				DC5816BD1FBEB09B0000226C /* ZXLoadingViewController.swift */,
+				DC774F911FC65F2400246CC5 /* demo.mov */,
+				DC5817071FBF97420000226C /* Classes */,
+				DC5816B61FBEB0230000226C /* Supporting Files */,
 			);
 			path = ZXLoadingView;
 			sourceTree = "<group>";
@@ -137,6 +140,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC5816B91FBEB0230000226C /* Assets.xcassets in Resources */,
+				DC774F921FC65F2400246CC5 /* demo.mov in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
