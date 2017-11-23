@@ -1,6 +1,6 @@
 # ZXLoadingView
 
-[![CI Status](http://img.shields.io/travis/zxin2928/ZXLoadingView.svg?style=flat)](https://travis-ci.org/zxin2928/ZXLoadingView)
+[![CI Status](http://img.shields.io/travis/ZXLoadingView.svg?style=flat)](https://travis-ci.org/ZXLoadingView)
 [![Version](https://img.shields.io/cocoapods/v/ZXLoadingView.svg?style=flat)](http://cocoapods.org/pods/ZXLoadingView)
 [![License](https://img.shields.io/cocoapods/l/ZXLoadingView.svg?style=flat)](http://cocoapods.org/pods/ZXLoadingView)
 [![Platform](https://img.shields.io/cocoapods/p/ZXLoadingView.svg?style=flat)](http://cocoapods.org/pods/ZXLoadingView)
