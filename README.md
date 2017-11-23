@@ -5,7 +5,7 @@
 [![License](https://img.shields.io/cocoapods/l/ZXLoadingView.svg?style=flat)](http://cocoapods.org/pods/ZXLoadingView)
 [![Platform](https://img.shields.io/cocoapods/p/ZXLoadingView.svg?style=flat)](http://cocoapods.org/pods/ZXLoadingView)
 
-![image](https://github.com/2928/ZXLoadingView/demo.gif) 
+![image](https://github.com/zxin2928/ZXLoadingView/blob/master/ZXLoadingView/demo.gif) 
 ## Example
 
 To run the example project directory.
