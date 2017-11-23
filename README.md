@@ -5,6 +5,8 @@
 [![License](https://img.shields.io/cocoapods/l/ZXLoadingView.svg?style=flat)](http://cocoapods.org/pods/ZXLoadingView)
 [![Platform](https://img.shields.io/cocoapods/p/ZXLoadingView.svg?style=flat)](http://cocoapods.org/pods/ZXLoadingView)
 
+![Demo](https://raw.githubusercontent.com/zxin2928/ZXLoadingView/master/demo.mov "Pod Demo")
+
 ## Example
 
 To run the example project directory.
