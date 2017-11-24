@@ -32,17 +32,17 @@ class ZXLoadingView: UIView {
     var activityIndicatorViewStyle:UIActivityIndicatorViewStyle!
     
     // default is YES. calls -setHidden when animating gets set to NO
-    var hidesWhenStopped:Bool!{
+    public var hidesWhenStopped:Bool!{
         didSet{
             self.isHidden = !self.isAnimating && hidesWhenStopped
 
         }
 
     }
-    var color:UIColor!
+   public var color:UIColor!
     
     /** Sets the line width of the spinner's circle. */
-    var lineWidth:CGFloat!{
+   public var lineWidth:CGFloat!{
         didSet{
             self.progressLayer.lineWidth = lineWidth
             self.updatePath()
@@ -51,7 +51,7 @@ class ZXLoadingView: UIView {
     }
 
     /** Sets the line cap of the spinner's circle. */
-     var lineCap:String!{
+    public var lineCap:String!{
         didSet{
             self.progressLayer.lineCap = lineCap
             self.updatePath()
@@ -63,10 +63,10 @@ class ZXLoadingView: UIView {
     var timingFunction:CAMediaTimingFunction!
     
     /** Property indicating the duration of the animation, default is 1.5s. Should be set prior to -[startAnimating] */
-    var duration:TimeInterval!
+    public var duration:TimeInterval!
     
     /** Property to manually set the percent complete of the spinner, in case you don't want to start at 0. Valid values are 0.0 to 1.0 */
-    var percentComplete:CGFloat!{
+    public var percentComplete:CGFloat!{
         didSet{
             if self.isAnimating {
                 return
@@ -138,13 +138,13 @@ class ZXLoadingView: UIView {
         }
     }
     
-    func setAnimating(animate:Bool){
+    public func setAnimating(animate:Bool){
         (animate ? self.startAnimating() : self.stopAnimating())
 
     }
 
     
-    func startAnimating(){
+    public func startAnimating(){
         if self.isAnimating{
             return
         }
@@ -202,7 +202,7 @@ class ZXLoadingView: UIView {
         }
     }
     
-    func stopAnimating(){
+    public func stopAnimating(){
         if !self.isAnimating{
             return
         }
