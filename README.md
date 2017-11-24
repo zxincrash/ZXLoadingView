@@ -36,6 +36,8 @@ The `lineWidth` and `tintColor` properties can even be set after animating has b
 
 ## Requirements
 
+swift4.0
+
 ## Installation
 
 ZXLoadingView is available through [CocoaPods](http://cocoapods.org). To install
