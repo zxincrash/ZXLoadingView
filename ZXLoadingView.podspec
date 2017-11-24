@@ -29,7 +29,7 @@ s.description      = <<-DESC
 
 DESC
 
-s.homepage       = "https://github.com/zxin2928/ZXLoadingView.git"
+s.homepage       = "https://github.com/zxin2928/ZXLoadingView"
 # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
