@@ -27,35 +27,32 @@ import UIKit
 let kZXRingStrokeAnimationKey:String = "zxloadingview.stroke"
 let kZXRingRotationAnimationKey:String = "zxloadingview.rotation"
 
-class ZXLoadingView: UIView {
-    // default is UIActivityIndicatorViewStyleWhite
-    var activityIndicatorViewStyle:UIActivityIndicatorViewStyle!
-    
+public class ZXLoadingView: UIView {
     // default is YES. calls -setHidden when animating gets set to NO
     public var hidesWhenStopped:Bool!{
         didSet{
             self.isHidden = !self.isAnimating && hidesWhenStopped
-
+            
         }
-
+        
     }
-   public var color:UIColor!
+    public var color:UIColor!
     
-    /** Sets the line width of the spinner's circle. */
-   public var lineWidth:CGFloat!{
+    /** Sets the line width of the  circle. */
+    public var lineWidth:CGFloat!{
         didSet{
             self.progressLayer.lineWidth = lineWidth
             self.updatePath()
-
+            
         }
     }
-
-    /** Sets the line cap of the spinner's circle. */
+    
+    /** Sets the line cap of the circle. */
     public var lineCap:String!{
         didSet{
             self.progressLayer.lineCap = lineCap
             self.updatePath()
-
+            
         }
     }
     
@@ -74,24 +71,24 @@ class ZXLoadingView: UIView {
             
             self.progressLayer.strokeStart = 0.0
             self.progressLayer.strokeEnd = self.percentComplete
-                
+            
         }
-
+        
     }
-
+    
     lazy var isAnimating:Bool! = false
     
-    override init(frame: CGRect) {
+    override public init(frame: CGRect) {
         super.init(frame: frame)
         self.initialize()
     }
     
-    override func awakeFromNib() {
+    override public func awakeFromNib() {
         super.awakeFromNib()
         self.initialize()
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
@@ -109,8 +106,8 @@ class ZXLoadingView: UIView {
         
         self.invalidateIntrinsicContentSize()
     }
-
-    override func layoutSubviews() {
+    
+    override public func layoutSubviews() {
         super.layoutSubviews()
         
         self.progressLayer.frame = CGRect.init(x: 0, y: 0, width: self.bounds.width, height: self.bounds.height)
@@ -119,15 +116,15 @@ class ZXLoadingView: UIView {
         
         self.updatePath()
     }
-
+    
     private func intrinsicContentSize() -> CGSize {
         return CGSize.init(width: self.bounds.width, height: self.bounds.height)
     }
     
-    override func tintColorDidChange() {
+    override public func tintColorDidChange() {
         super.tintColorDidChange()
         self.progressLayer.strokeColor = self.tintColor.cgColor;
-
+        
     }
     
     @objc private func resetAnimations(){
@@ -140,9 +137,9 @@ class ZXLoadingView: UIView {
     
     public func setAnimating(animate:Bool){
         (animate ? self.startAnimating() : self.stopAnimating())
-
+        
     }
-
+    
     
     public func startAnimating(){
         if self.isAnimating{
@@ -186,7 +183,7 @@ class ZXLoadingView: UIView {
         endTailAnimation.fromValue = 1.0
         endTailAnimation.toValue = 1.0
         endTailAnimation.timingFunction = self.timingFunction
-
+        
         let animations:CAAnimationGroup = CAAnimationGroup()
         animations.duration = self.duration
         animations.animations = [headAnimation,tailAnimation,endHeadAnimation,endTailAnimation]
@@ -238,3 +235,4 @@ class ZXLoadingView: UIView {
     }()
     
 }
+
