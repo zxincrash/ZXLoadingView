@@ -12,7 +12,6 @@
 		DC5816BE1FBEB09B0000226C /* ZXLoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5816BD1FBEB09B0000226C /* ZXLoadingViewController.swift */; };
 		DC5817091FBF97420000226C /* ZXLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5817081FBF97420000226C /* ZXLoadingView.swift */; };
 		DCEDC8E91FC66DBA00E3590B /* demo.gif in Resources */ = {isa = PBXBuildFile; fileRef = DCEDC8E81FC66DBA00E3590B /* demo.gif */; };
-		DCEDC8F41FC6C7B500E3590B /* .travis.yml in Resources */ = {isa = PBXBuildFile; fileRef = DCEDC8F31FC6C7B500E3590B /* .travis.yml */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,7 +22,6 @@
 		DC5816BD1FBEB09B0000226C /* ZXLoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZXLoadingViewController.swift; sourceTree = "<group>"; };
 		DC5817081FBF97420000226C /* ZXLoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZXLoadingView.swift; sourceTree = "<group>"; };
 		DCEDC8E81FC66DBA00E3590B /* demo.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = demo.gif; sourceTree = "<group>"; };
-		DCEDC8F31FC6C7B500E3590B /* .travis.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,7 +38,6 @@
 		DC5816981FBEAEB10000226C = {
 			isa = PBXGroup;
 			children = (
-				DCEDC8F31FC6C7B500E3590B /* .travis.yml */,
 				DC5816A31FBEAEB10000226C /* ZXLoadingView */,
 				DC5816A21FBEAEB10000226C /* Products */,
 			);
@@ -142,7 +139,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DCEDC8F41FC6C7B500E3590B /* .travis.yml in Resources */,
 				DC5816B91FBEB0230000226C /* Assets.xcassets in Resources */,
 				DCEDC8E91FC66DBA00E3590B /* demo.gif in Resources */,
 			);
