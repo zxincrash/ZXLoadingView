@@ -50,7 +50,7 @@ pod 'ZXLoadingView'
 
 ## Author
 
-zxin2928, 125773896@qq.com
+zxin2928, zxin2928@icloud.com
 
 ## License
 
