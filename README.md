@@ -4,6 +4,7 @@
 [![Version](https://img.shields.io/cocoapods/v/ZXLoadingView.svg?style=flat)](http://cocoapods.org/pods/ZXLoadingView)
 [![License](https://img.shields.io/cocoapods/l/ZXLoadingView.svg?style=flat)](http://cocoapods.org/pods/ZXLoadingView)
 [![Platform](https://img.shields.io/cocoapods/p/ZXLoadingView.svg?style=flat)](http://cocoapods.org/pods/ZXLoadingView)
+[![Join the chat at https://gitter.im/zxin2928/ZXLoadingView](https://badges.gitter.im/zxin2928/ZXLoadingView.svg)](https://gitter.im/zxin2928/ZXLoadingView?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 ![image](https://github.com/zxin2928/ZXLoadingView/blob/master/ZXLoadingView/demo.gif) 
 ## Example
